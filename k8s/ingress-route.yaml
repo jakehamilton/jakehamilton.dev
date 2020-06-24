@@ -1,0 +1,39 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: jakehamilton-dev-http
+  labels:
+    app.kubernetes.io/name: jakehamilton-dev-http
+    app.kubernetes.io/part-of: jakehamilton-dev
+spec:
+  entryPoints:
+    - http
+  routes:
+    - kind: Rule
+      match: Host(`www.jakehamilton.dev`) || Host(`jakehamilton.dev`)
+      services:
+        - name: jakehamilton-dev
+          port: 80
+      middlewares:
+        - name: redirect-to-https
+          namespace: traefik
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: jakehamilton-dev-https
+  labels:
+    app.kubernetes.io/name: jakehamilton-dev-https
+    app.kubernetes.io/part-of: jakehamilton-dev
+spec:
+  tls:
+    secretName: jakehamilton-dev-tls
+  entryPoints:
+    - https
+  routes:
+    - kind: Rule
+      match: Host(`www.jakehamilton.dev`) || Host(`jakehamilton.dev`)
+      services:
+        - name: jakehamilton-dev
+          port: 80

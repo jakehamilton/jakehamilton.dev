@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jakehamilton-dev
+  labels:
+    app.kubernetes.io/name: jakehamilton-dev
+    app.kubernetes.io/part-of: jakehamilton-dev

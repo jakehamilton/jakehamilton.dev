@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: jakehamilton-dev-tls
+spec:
+  commonName: jakehamilton.dev
+  secretName: jakehamilton-dev-tls
+  dnsNames:
+    - jakehamilton.dev
+    - www.jakehamilton.dev
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-prod

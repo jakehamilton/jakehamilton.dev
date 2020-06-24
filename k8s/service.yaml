@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jakehamilton-dev
+  labels:
+    app.kubernetes.io/name: jakehamilton-dev
+    app.kubernetes.io/part-of: jakehamilton-dev
+spec:
+  ports:
+    - port: 80
+  selector:
+    app.kubernetes.io/name: jakehamilton-dev
+    app.kubernetes.io/part-of: jakehamilton-dev
