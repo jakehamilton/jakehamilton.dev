@@ -65,7 +65,7 @@ const Toolbar = ({ children }) => {
                 </div>
             </div>
             <div class="Toolbar__right">
-                <a href="/assets/docs/Jake Hamilton Resume.pdf" download="Jake Hamilton Resume" class="Toolbar__link">Resume</a>
+                <a href="/assets/docs/Jake Hamilton Resume.pdf" download="Jake Hamilton Resume.pdf" class="Toolbar__link">Resume</a>
                 <a href="mailto:jake.hamilton@hey.com" class="Toolbar__link">Email</a>
             </div>
         </div>
