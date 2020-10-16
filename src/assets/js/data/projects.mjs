@@ -10,6 +10,11 @@ export default [
         description: 'Real-time story point estimation for teams.'
     },
     {
+        name: '🤖 Titan',
+        url: 'https://npm.im/@jakehamilton/titan',
+        description: 'A monorepo management tool for JavaScript packages.'
+    },
+    {
         name: '🍊 Juice (in progress)',
         url: 'https://git.intergalactic.dev/jake/juice',
         description: 'A new, statically typed programming language that compiles to JavaScript.',
