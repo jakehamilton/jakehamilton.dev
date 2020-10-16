@@ -5,6 +5,11 @@ export default [
         description: 'A playground full of fun, unique experiments.',
     },
     {
+        name: '🐠 scrumfi.sh',
+        url: 'https://scrumfi.sh',
+        description: 'Real-time story point estimation for teams.'
+    },
+    {
         name: '🍊 Juice (in progress)',
         url: 'https://git.intergalactic.dev/jake/juice',
         description: 'A new, statically typed programming language that compiles to JavaScript.',
