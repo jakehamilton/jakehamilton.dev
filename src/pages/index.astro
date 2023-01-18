@@ -1,0 +1,351 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+import {
+	CodepenLogo,
+	BracketsCurly,
+	Code,
+	GithubLogo,
+	TwitterLogo,
+	Envelope,
+	At,
+	File,
+} from "phosphor-react";
+---
+
+<Layout title="Jake Hamilton">
+	<main class="pb-32">
+		<div
+			class="bg-[#bfa5e6] py-8 grid grid-auto-rows phone:grid-rows-[1fr] phone:grid-cols-[1fr_max-content_max-content_1fr] gap-4"
+		>
+			<div class="phone:col-start-2 flex justify-center">
+				<img
+					src="/images/avatar.svg"
+					class="w-[180px] h-[180px] tablet:w-[240px] tablet:h-[240px] mr-6 phone:mr-0"
+				/>
+			</div>
+			<div
+				class="phone:col-start-3 flex items-center justify-center flex-col text-white"
+			>
+				<h1 class="font-bold tablet:text-6xl text-5xl text-center">
+					Jake Hamilton
+				</h1>
+				<span class="font-bold tablet:text-4xl text-3xl text-center"
+					>Software Engineer</span
+				>
+			</div>
+		</div>
+		<div class="flex">
+			<div class="grow h-[4px] bg-nord11"></div>
+			<div class="grow h-[4px] bg-nord12"></div>
+			<div class="grow h-[4px] bg-nord13"></div>
+			<div class="grow h-[4px] bg-nord14"></div>
+			<div class="grow h-[4px] bg-nord9"></div>
+		</div>
+		<div class="flex justify-center flex-wrap pt-6 gap-4 px-4">
+			<a
+				href="mailto:jake.hamilton@hey.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="p-4 rounded-full transition-all shadow shadow-transparent bg-nord4 dark:bg-nord1 hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:-translate-y-1 hover:shadow-md active:translate-y-0"
+				aria-label="Email"
+			>
+				<Envelope size={24} weight="bold" />
+			</a>
+			<a
+				href="https://hachyderm.io/jakehamilton"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="p-4 rounded-full transition-all shadow shadow-transparent bg-nord4 dark:bg-nord1 hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:-translate-y-1 hover:shadow-md active:translate-y-0"
+				aria-label="Mastodon"
+			>
+				<At size={24} weight="bold" />
+			</a>
+			<a
+				href="https://twitter.com/jakehamiltondev"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="p-4 rounded-full transition-all shadow shadow-transparent bg-nord4 dark:bg-nord1 hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:-translate-y-1 hover:shadow-md active:translate-y-0"
+				aria-label="Twitter"
+			>
+				<TwitterLogo size={24} weight="bold" />
+			</a>
+			<a
+				href="https://github.com/jakehamilton"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="p-4 rounded-full transition-all shadow shadow-transparent bg-nord4 dark:bg-nord1 hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:-translate-y-1 hover:shadow-md active:translate-y-0"
+				aria-label="GitHub"
+			>
+				<GithubLogo size={24} weight="bold" />
+			</a>
+			<a
+				href="/documents/Jake Hamilton Resume.pdf"
+				download="Jake Hamilton Resume.pdf"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="p-4 rounded-full transition-all shadow shadow-transparent bg-nord4 dark:bg-nord1 hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:-translate-y-1 hover:shadow-md active:translate-y-0"
+				aria-label="Resume"
+			>
+				<File size={24} weight="bold" />
+			</a>
+		</div>
+		<div class="flex justify-center gap-4 py-6">
+			<button
+				data-target="projects"
+				class="px-4 py-2 rounded-full shadow shadow-transparent bg-nord9 text-white font-bold hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:shadow-md hover:-translate-y-1 active:translate-y-0 active:shadow-transparent transition-all"
+			>
+				Projects
+			</button>
+			<button
+				data-target="about"
+				class="px-4 py-2 rounded-full shadow shadow-transparent bg-nord4 dark:bg-nord1 dark:text-white text-nord0 font-bold hover:bg-nord0 dark:hover:bg-nord6 hover:text-white dark:hover:text-nord0 hover:shadow-md hover:-translate-y-1 active:translate-y-0 active:shadow-transparent transition-all"
+			>
+				About Me
+			</button>
+		</div>
+		<div
+			data-name="projects"
+			class="px-4 mx-auto w-full max-w-6xl grid phone:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4"
+		>
+			<Project
+				name="bytesize"
+				description="Lessons learned from my time in the software industry."
+				icon="📖"
+				link="https://bytesize.xyz"
+			/>
+			<Project
+				name="CodePen"
+				description="A playground full of fun, unique experiments."
+				icon={CodepenLogo}
+				link="https://codepen.io/short"
+			/>
+			<Project
+				name="LittleLog"
+				description="A simple, stylish logging utility."
+				icon="🪵"
+				link="https://npm.im/@littlethings/log"
+			/>
+			<Project
+				name="DotBox"
+				description="A simple, readable configuration language."
+				icon="/images/dotbox.svg"
+				link="https://dotbox.dev"
+			/>
+			<Project
+				name="Titan"
+				description="A monorepo management tool for JavaScript packages."
+				icon="🤖"
+				link="https://npm.im/@jakehamilton/titan"
+			/>
+			<Project
+				name="Config"
+				description="One Nix Flake to rule them all. Go even further beyond. ✨"
+				icon="/images/nix.svg"
+				link="https://github.com/jakehamilton/config"
+				classes={{
+					icon: "invert dark:invert-0",
+				}}
+			/>
+			<Project
+				name="Snowfall Lib"
+				description="Unified configuration for systems, packages, and more with Nix Flakes."
+				icon="/images/nix.svg"
+				link="https://github.com/snowfallorg/lib"
+				classes={{
+					icon: "invert dark:invert-0",
+				}}
+			/>
+			<Project
+				name="Snowfall Flake"
+				description="Simplified Nix Flakes on the command line."
+				icon="/images/nix.svg"
+				link="https://github.com/snowfallorg/lib"
+				classes={{
+					icon: "invert dark:invert-0",
+				}}
+			/>
+			<Project
+				name="Ice House"
+				description="Cold storage made easy."
+				icon="💽"
+				link="https://github.com/snowfallorg/icehouse"
+			/>
+			<Project
+				name="Panoptic"
+				description="Provide visibility into Kubernetes Deployments and Ingress resources."
+				icon="🔭"
+				link="https://github.com/jakehamilton/panoptic"
+			/>
+			<Project
+				name="Leverage"
+				description="A framework for building server/client applications with dependency injection."
+				icon="📡"
+				link="https://npm.im/@leverage/core"
+			/>
+			<Project
+				name="Starters"
+				description="A project bootstrapping tool with batteries included."
+				icon="🚀"
+				link="https://npm.im/@starters/cli"
+			/>
+			<Project
+				name="LittleSchemer"
+				description="Generate TypeScript code from a JSON schema."
+				icon={BracketsCurly}
+				link="https://npm.im/@littlethings/schemer"
+			/>
+			<Project
+				name="LittleCoder"
+				description="A small and simple code generation tool."
+				icon={Code}
+				link="https://npm.im/@littlethings/coder"
+			/>
+			<Project
+				name="Senchou"
+				description="Generate TypeScript for Kubernetes resources."
+				icon="🚢"
+				link="https://npm.im/@senchou/cli"
+			/>
+			<Project
+				name="Joy Control"
+				description="Control your PC with a Joy-Con."
+				icon="🎮"
+				link="https://github.com/jakehamilton/joy-control"
+			/>
+			<Project
+				name="Traek"
+				description="A simple, offline-first habit tracker web app."
+				icon="✅"
+				link="https://traek.app"
+			/>
+			<Project
+				name="Lasers & Feelings"
+				description="Save the galaxy... with friends!"
+				icon="♥️"
+				link="https://lasersandfeelings.com"
+			/>
+			<Project
+				name="Sokoban"
+				description="Boxes and Blockers, what more could a robot ask for?"
+				icon="🤖"
+				link="https://sokoban.app"
+			/>
+			<Project
+				name="scrumfi.sh"
+				description="Real-time story point estimation for agile teams."
+				icon="🐠"
+				link="https://scrumfi.sh"
+			/>
+			<Project
+				name="Retrospectacle"
+				description="Retrospective with some POP."
+				icon="🎲"
+				link="https://github.com/jakehamilton/retrospectacle.app"
+			/>
+			<Project
+				name="Blink"
+				description="A Netflix-style user interface for Twitch.tv"
+				icon="👀"
+				link="https://github.com/jakehamilton/blink"
+			/>
+			<Project
+				name="And More..."
+				description="Find all of my projects on GitHub."
+				icon="/images/profile.svg"
+				link="https://github.com/jakehamilton"
+				classes={{
+					icon: "rounded-full",
+				}}
+			/>
+		</div>
+		<div data-name="about" class="hidden">
+			<div class="mx-auto max-w-2xl px-4">
+				<p class="text-lg">
+					Hi, I'm Jake Hamilton. I've been working as a Software Engineer for
+					the last 6 years doing frontend development, building NodeJS services,
+					writing JavaScript libraries, creating tools, running Kubernetes
+					clusters, and more. I am passionate about solving problems and helping
+					others by building good, fast, and small tools. While my core skill
+					set is frontend development, I have found a love for technologies like
+					Kubernetes and Nix. Learning new technologies is always an exciting
+					experience and I enjoy building things with them as much as I enjoy
+					teaching them to others.
+				</p>
+			</div>
+		</div>
+	</main>
+
+	<script type="module">
+		const buttons = document.querySelectorAll("button[data-target]");
+
+		let activeButton;
+		let activeSection;
+
+		const styles = {
+			button: {
+				active: ["bg-nord9", "text-white"],
+				inactive: [
+					"bg-nord4",
+					"dark:bg-nord1",
+					"text-nord0",
+					"dark:text-white",
+				],
+			},
+		};
+
+		const style = (element, { add = [], remove = [] }) => {
+			for (const removed of remove) {
+				element.classList.remove(removed);
+			}
+
+			for (const added of add) {
+				element.classList.add(added);
+			}
+		};
+
+		const transition = (target) => {
+			const button = document.querySelector(`button[data-target="${target}"]`);
+			const section = document.querySelector(`div[data-name="${target}"]`);
+
+			if (!activeButton || !activeSection) {
+				// Transition without fade out
+				style(button, {
+					add: styles.button.active,
+					remove: styles.button.inactive,
+				});
+
+				section.classList.remove("hidden");
+
+				activeButton = button;
+				activeSection = section;
+			} else {
+				// Transition with fade out
+				style(activeButton, {
+					add: styles.button.inactive,
+					remove: styles.button.active,
+				});
+				style(button, {
+					add: styles.button.active,
+					remove: styles.button.inactive,
+				});
+
+				activeSection.classList.add("hidden");
+				section.classList.remove("hidden");
+
+				activeButton = button;
+				activeSection = section;
+			}
+		};
+
+		const onButtonClick = (event) => {
+			transition(event.target.getAttribute("data-target"));
+		};
+
+		for (const button of buttons) {
+			button.addEventListener("click", onButtonClick);
+		}
+
+		transition("projects");
+	</script>
+</Layout>
